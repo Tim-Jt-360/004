@@ -322,12 +322,6 @@ var APP_DATA = {
           "pitch": 0.6031416403143197,
           "rotation": 0,
           "target": "3-korridor"
-        },
-        {
-          "yaw": -1.0898138717984835,
-          "pitch": 0.14340111947721113,
-          "rotation": 0,
-          "target": "7-vorraum"
         }
       ],
       "infoHotspots": []
@@ -362,10 +356,98 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.2715279925263197,
-          "pitch": 0.3994630936905086,
+          "yaw": -2.2881023252098167,
+          "pitch": 0.449580896359123,
           "rotation": 0,
           "target": "3-korridor"
+        },
+        {
+          "yaw": -0.560991395510861,
+          "pitch": 0.40217418665288207,
+          "rotation": 0,
+          "target": "8-zimmer-3"
+        },
+        {
+          "yaw": -2.526282125638099,
+          "pitch": 0.35097438610273457,
+          "rotation": 0,
+          "target": "9-zimmer-4"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "8-zimmer-3",
+      "name": "Zimmer 3",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1500,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.8770162846793621,
+          "pitch": 0.20326775744861436,
+          "rotation": 0,
+          "target": "7-vorraum"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "9-zimmer-4",
+      "name": "Zimmer 4",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1500,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": 0.8568739785720609,
+          "pitch": 0.18335688741258416,
+          "rotation": 0,
+          "target": "7-vorraum"
         }
       ],
       "infoHotspots": []
