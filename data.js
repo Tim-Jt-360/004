@@ -20,6 +20,8 @@ var APP_DATA = {
         {
           "tileSize": 512,
           "size": 2048
+        },
+        {
           "tileSize": 512,
           "size": 4096
         }
@@ -476,8 +478,8 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 0.8529195802175025,
-          "pitch": 0.13279187936988635,
+          "yaw": 0.8419383697950256,
+          "pitch": 0.23723407632673243,
           "rotation": 0,
           "target": "7-vorraum"
         }
