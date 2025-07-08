@@ -488,6 +488,7 @@ var APP_DATA = {
     }
   ],
   "name": "Zum Näfbach",
+  "name": "Project Title",
   "settings": {
     "mouseViewMode": "drag",
     "autorotateEnabled": true,
