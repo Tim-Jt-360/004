@@ -487,7 +487,7 @@ var APP_DATA = {
       "infoHotspots": []
     }
   ],
-  "name": "Project Title",
+  "name": "Zum Näfbach",
   "settings": {
     "mouseViewMode": "drag",
     "autorotateEnabled": true,
