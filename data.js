@@ -34,16 +34,22 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 1.4728920863872474,
-          "pitch": 0.31503105813614063,
+          "yaw": -0.06446897385754724,
+          "pitch": 0.186370493782416,
           "rotation": 0,
-          "target": "1-kche"
+          "target": "3-wohnen-essen"
         },
         {
-          "yaw": -0.006363945551424166,
-          "pitch": 0.3369320278433232,
+          "yaw": 0.2456577441675627,
+          "pitch": 0.07755235623417889,
           "rotation": 0,
-          "target": "2-wohnen-essen"
+          "target": "2-bad-1"
+        },
+        {
+          "yaw": 1.441332082853009,
+          "pitch": 0.2777409782456175,
+          "rotation": 0,
+          "target": "1-kche"
         }
       ],
       "infoHotspots": []
@@ -82,28 +88,70 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -0.21672588522348413,
-          "pitch": 0.16793515228283162,
+          "yaw": -0.18543951922957902,
+          "pitch": 0.18464913725875398,
           "rotation": 0,
-          "target": "2-wohnen-essen"
+          "target": "3-wohnen-essen"
         },
         {
-          "yaw": -2.462695244028616,
-          "pitch": 0.46475512407441855,
+          "yaw": -2.5071732749615716,
+          "pitch": 0.09487704566230448,
           "rotation": 0,
           "target": "0-entre"
         },
         {
-          "yaw": 2.1891204159709776,
-          "pitch": 0.4542696991402053,
+          "yaw": 2.218947453317048,
+          "pitch": 0.4292739640439951,
           "rotation": 0,
-          "target": "3-korridor"
+          "target": "4-korridor"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "2-wohnen-essen",
+      "id": "2-bad-1",
+      "name": "Bad 1",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        },
+        {
+          "tileSize": 512,
+          "size": 4096
+        }
+      ],
+      "faceSize": 3000,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": 2.821267715021081,
+          "pitch": 0.08879755279764723,
+          "rotation": 0,
+          "target": "0-entre"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "3-wohnen-essen",
       "name": "Wohnen-Essen",
       "levels": [
         {
@@ -136,14 +184,14 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.302961385206398,
-          "pitch": 0.296037285628433,
+          "yaw": -2.353835313810821,
+          "pitch": 0.26890186906702773,
           "rotation": 0,
           "target": "0-entre"
         },
         {
-          "yaw": 2.3958917165036375,
-          "pitch": 0.22892297276761653,
+          "yaw": 2.42208712529974,
+          "pitch": 0.20952824940045467,
           "rotation": 0,
           "target": "1-kche"
         }
@@ -151,7 +199,7 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "3-korridor",
+      "id": "4-korridor",
       "name": "Korridor",
       "levels": [
         {
@@ -184,40 +232,40 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -2.4138473039242037,
-          "pitch": 0.5314415643926456,
+          "yaw": -2.397689877544332,
+          "pitch": 0.4746625990344988,
           "rotation": 0,
           "target": "1-kche"
         },
         {
-          "yaw": -2.7289123917320683,
-          "pitch": 0.3299004778443244,
+          "yaw": -2.6563807819405643,
+          "pitch": 0.1055271709828638,
           "rotation": 0,
-          "target": "4-zimmer-1"
+          "target": "5-zimmer-1"
         },
         {
-          "yaw": -0.2459815072370919,
-          "pitch": 0.3525257215913804,
+          "yaw": -0.18062725548456626,
+          "pitch": 0.23654205117853877,
           "rotation": 0,
-          "target": "5-zimmer-2"
+          "target": "6-zimmer-2"
         },
         {
-          "yaw": -0.5169726240095045,
-          "pitch": 0.12400572449862679,
+          "yaw": 0.24670972171822925,
+          "pitch": 0.0899378778537816,
           "rotation": 0,
-          "target": "7-vorraum"
+          "target": "7-bad-2"
         },
         {
-          "yaw": 0.22021633772078886,
-          "pitch": 0.17642920674660445,
+          "yaw": -0.546359278445177,
+          "pitch": 0.006113128126758127,
           "rotation": 0,
-          "target": "6-bad"
+          "target": "8-vorraum"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "4-zimmer-1",
+      "id": "5-zimmer-1",
       "name": "Zimmer 1",
       "levels": [
         {
@@ -250,16 +298,16 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -1.4979696420450903,
-          "pitch": 0.22318491364955761,
+          "yaw": -1.4996510516244541,
+          "pitch": 0.23281243065175872,
           "rotation": 0,
-          "target": "3-korridor"
+          "target": "4-korridor"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "5-zimmer-2",
+      "id": "6-zimmer-2",
       "name": "Zimmer 2",
       "levels": [
         {
@@ -292,23 +340,23 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -0.8795643087239533,
-          "pitch": -0.015008091868129014,
+          "yaw": -0.8624703734531831,
+          "pitch": -0.11683382047422697,
           "rotation": 0,
-          "target": "7-vorraum"
+          "target": "8-vorraum"
         },
         {
-          "yaw": -0.9339099137632001,
-          "pitch": 0.3882997385570164,
+          "yaw": -0.9631893538668077,
+          "pitch": 0.38382184872468983,
           "rotation": 0,
-          "target": "3-korridor"
+          "target": "4-korridor"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "6-bad",
-      "name": "Bad",
+      "id": "7-bad-2",
+      "name": "Bad 2",
       "levels": [
         {
           "tileSize": 256,
@@ -340,16 +388,22 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -1.2719862116646468,
-          "pitch": 0.5707619446700072,
+          "yaw": -1.407032172758388,
+          "pitch": 0.0907234273966413,
           "rotation": 0,
-          "target": "3-korridor"
+          "target": "4-korridor"
+        },
+        {
+          "yaw": -1.1400735097180537,
+          "pitch": -0.003161201699910521,
+          "rotation": 0,
+          "target": "8-vorraum"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "7-vorraum",
+      "id": "8-vorraum",
       "name": "Vorraum",
       "levels": [
         {
@@ -382,28 +436,28 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -0.23162550704532237,
-          "pitch": 0.4380801260410152,
+          "yaw": -0.17303222108173344,
+          "pitch": 0.24033397342055096,
           "rotation": 0,
-          "target": "8-zimmer-3"
+          "target": "9-zimmer-3"
         },
         {
-          "yaw": -2.413631886114594,
-          "pitch": 0.0912798444423899,
+          "yaw": -2.867731263507366,
+          "pitch": 0.004451939952424766,
           "rotation": 0,
-          "target": "3-korridor"
+          "target": "10-zimmer-4"
         },
         {
-          "yaw": -2.870028670940858,
-          "pitch": 0.3334437695550836,
+          "yaw": -2.084250737910782,
+          "pitch": 0.7336706126211272,
           "rotation": 0,
-          "target": "9-zimmer-4"
+          "target": "4-korridor"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "8-zimmer-3",
+      "id": "9-zimmer-3",
       "name": "Zimmer 3",
       "levels": [
         {
@@ -436,16 +490,16 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -0.8575367746085742,
-          "pitch": 0.3718553958820845,
+          "yaw": -0.8719778274728718,
+          "pitch": 0.21204636077827388,
           "rotation": 0,
-          "target": "7-vorraum"
+          "target": "8-vorraum"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "9-zimmer-4",
+      "id": "10-zimmer-4",
       "name": "Zimmer 4",
       "levels": [
         {
@@ -478,16 +532,15 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 0.8419383697950256,
-          "pitch": 0.23723407632673243,
+          "yaw": 0.8565109688498165,
+          "pitch": 0.29404769230799843,
           "rotation": 0,
-          "target": "7-vorraum"
+          "target": "8-vorraum"
         }
       ],
       "infoHotspots": []
     }
   ],
-  "name": "Zum Näfbach",
   "settings": {
     "mouseViewMode": "drag",
     "autorotateEnabled": true,
