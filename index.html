@@ -94,7 +94,7 @@
   padding: 50px;
   overflow: hidden;
 ">
-    <img id="panelImage" src="img/plano1.jpg" alt="Plano"
+    <img id="panelImage" src="" alt="Plano"
       style="max-width: 100%; max-height: 80vh; border-radius: 8px; display: none;">
   </div>
 
@@ -122,39 +122,17 @@
 
       a.appendChild(li);
       el.appendChild(a);
-
-    });
-
-    // Relaciona cada escena con su imagen
-    const sceneImages = [
-      "img/plano1.jpg",
-      "img/plano2.jpg",
-      "img/plano3.jpg",
-      "img/plano4.jpg",
-      "img/plano5.jpg",
-      "img/plano6.jpg",
-      "img/plano7.jpg",
-      "img/plano8.jpg",
-      "img/plano9.jpg",
-      "img/plano10.jpg",
-      "img/plano11.jpg"
-    ];
-
-    // Cuando selecciones una escena, cambia la imagen del panel
-    const sceneLinks = document.querySelectorAll('.scene');
-    sceneLinks.forEach((link, idx) => {
-      link.addEventListener('click', () => {
-        panelImage.src = sceneImages[idx];
-      });
     });
 
     // Función para actualizar la imagen del plano según la escena activa
     function updatePlanoImageById(sceneId) {
       const panelImage = document.getElementById('panelImage');
       panelImage.src = `img/plano_${sceneId}.jpg`;
+      panelImage.style.display = '';
     }
 
     // Cuando selecciones una escena desde el menú de la izquierda
+    const sceneLinks = document.querySelectorAll('.scene');
     sceneLinks.forEach(link => {
       link.addEventListener('click', () => {
         const sceneId = link.getAttribute('data-id');
