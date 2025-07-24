@@ -148,12 +148,32 @@
       });
     });
 
+    // Función para actualizar la imagen del plano según la escena activa
+    function updatePlanoImageById(sceneId) {
+      const panelImage = document.getElementById('panelImage');
+      panelImage.src = `img/plano_${sceneId}.jpg`;
+    }
+
+    // Cuando selecciones una escena desde el menú de la izquierda
+    sceneLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const sceneId = link.getAttribute('data-id');
+        updatePlanoImageById(sceneId);
+      });
+    });
+
+    // Cuando cambies de escena desde un hotspot, llama también a updatePlanoImageById
+    // Busca la función que cambia de escena, por ejemplo:
+    function switchScene(scene) {
+      // ...código existente para cambiar de escena...
+      updatePlanoImageById(scene.id); // <-- Añade esto
+    }
+
     // Panel derecho
     const rightPanel = document.getElementById('rightPanel');
     const rightPanelToggle = document.getElementById('rightPanelToggle');
     const rightPanelIconOff = rightPanelToggle.querySelector('.icon.off');
     const rightPanelIconOn = rightPanelToggle.querySelector('.icon.on');
-    const panelImage = document.getElementById('panelImage');
     let rightPanelOpen = true; // <-- Abierto al cargar
 
     // Panel abierto y la imagen visible al cargar
