@@ -124,27 +124,44 @@
       el.appendChild(a);
     });
 
-    // Función para actualizar la imagen del plano según la escena activa
-    function updatePlanoImageById(sceneId) {
-      const panelImage = document.getElementById('panelImage');
-      panelImage.src = `img/plano_${sceneId}.jpg`;
-      panelImage.style.display = '';
-    }
-
     // Cuando selecciones una escena desde el menú de la izquierda
     const sceneLinks = document.querySelectorAll('.scene');
-    sceneLinks.forEach(link => {
+    sceneLinks.forEach((link) => {
       link.addEventListener('click', () => {
+        // Solo llama a switchScene, NO a updatePlanoImageByIndex
         const sceneId = link.getAttribute('data-id');
-        updatePlanoImageById(sceneId);
+        const sceneObj = scenes.find(s => s.data.id === sceneId);
+        if (sceneObj) switchScene(sceneObj);
       });
     });
 
-    // Cuando cambies de escena desde un hotspot, llama también a updatePlanoImageById
+    // Cuando cambies de escena desde un hotspot, llama también a updatePlanoImageByIndex
     function switchScene(scene) {
-      // ...código existente para cambiar de escena...
-      updatePlanoImageById(scene.id);
+      stopAutorotate();
+      scene.view.setParameters(scene.data.initialViewParameters);
+      scene.scene.switchTo();
+      startAutorotate();
+      updateSceneName(scene);
+      updateSceneList(scene);
+      updatePlanoImageBySceneId(scene.data.id); // <-- Añadido aquí
     }
+
+    // Función para actualizar la imagen del plano según el índice de la escena activa
+    function updatePlanoImageByIndex(idx) {
+      const panelImage = document.getElementById('panelImage');
+      panelImage.src = `img/plano${idx + 1}.jpg`;
+      panelImage.style.display = '';
+    }
+
+    function updatePlanoImageBySceneId(sceneId) {
+  const panelImage = document.getElementById('panelImage');
+  // Busca el índice de la escena por su id
+  const idx = APP_DATA.scenes.findIndex(s => s.id === sceneId);
+  if (idx !== -1) {
+    panelImage.src = `img/plano${idx + 1}.jpg`;
+    panelImage.style.display = '';
+  }
+}
 
     // Panel derecho
     const rightPanel = document.getElementById('rightPanel');
@@ -162,8 +179,7 @@
 
     // Al cargar la página, muestra la imagen de la primera escena
     if (sceneLinks.length > 0) {
-      const firstSceneId = sceneLinks[0].getAttribute('data-id');
-      updatePlanoImageById(firstSceneId);
+      updatePlanoImageByIndex(0);
     }
 
     rightPanelToggle.addEventListener('click', () => {

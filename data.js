@@ -549,3 +549,12 @@ var APP_DATA = {
     "viewControlButtons": false
   }
 };
+
+function switchScene(scene) {
+  // ...código para cambiar de escena...
+  // Aquí debes actualizar la imagen:
+  const idx = APP_DATA.scenes.findIndex(s => s.id === scene.id);
+  if (idx !== -1) {
+    updatePlanoImageByIndex(idx);
+  }
+}

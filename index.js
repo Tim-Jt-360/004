@@ -189,6 +189,12 @@
     startAutorotate();
     updateSceneName(scene);
     updateSceneList(scene);
+
+    // ACTUALIZA LA IMAGEN DEL PLANO SEGÚN LA ESCENA ACTIVA
+    var idx = data.scenes.findIndex(function(s) { return s.id === scene.data.id; });
+    if (idx !== -1) {
+      updatePlanoImageByIndex(idx);
+    }
   }
 
   function updateSceneName(scene) {
@@ -384,6 +390,14 @@
       }
     }
     return null;
+  }
+
+  function updatePlanoImageByIndex(idx) {
+    var panelImage = document.getElementById('panelImage');
+    if (panelImage) {
+      panelImage.src = "img/plano" + (idx + 1) + ".jpg";
+      panelImage.style.display = '';
+    }
   }
 
   // Display the initial scene.
