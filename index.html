@@ -163,10 +163,9 @@
     });
 
     // Cuando cambies de escena desde un hotspot, llama también a updatePlanoImageById
-    // Busca la función que cambia de escena, por ejemplo:
     function switchScene(scene) {
       // ...código existente para cambiar de escena...
-      updatePlanoImageById(scene.id); // <-- Añade esto
+      updatePlanoImageById(scene.id);
     }
 
     // Panel derecho
@@ -174,6 +173,7 @@
     const rightPanelToggle = document.getElementById('rightPanelToggle');
     const rightPanelIconOff = rightPanelToggle.querySelector('.icon.off');
     const rightPanelIconOn = rightPanelToggle.querySelector('.icon.on');
+    const panelImage = document.getElementById('panelImage');
     let rightPanelOpen = true; // <-- Abierto al cargar
 
     // Panel abierto y la imagen visible al cargar
@@ -181,6 +181,12 @@
     rightPanelIconOff.style.display = 'none';
     rightPanelIconOn.style.display = '';
     panelImage.style.display = '';
+
+    // Al cargar la página, muestra la imagen de la primera escena
+    if (sceneLinks.length > 0) {
+      const firstSceneId = sceneLinks[0].getAttribute('data-id');
+      updatePlanoImageById(firstSceneId);
+    }
 
     rightPanelToggle.addEventListener('click', () => {
       rightPanelOpen = !rightPanelOpen;
